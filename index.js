@@ -102,11 +102,11 @@ Use the getInningScore() function below to do the following:
 
 function getInningScore(inning) {
   let home = inning();
-  let away = inning();{
+  let away = inning();
  return {'Away': away, 'Home': home}
-  }
+  
 }
-console.log(getInningScore(inning));  
+ 
 
 
 /* ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
@@ -150,10 +150,25 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningScore, inning, number) {
+  let bothScore = [];
+  let homeScore = 0;
+  let awayScore = 0;
+  for (let i=0; i<number; i++){
+    homeScore = inning() + homeScore;
+    awayScore = inning() + awayScore;
+    bothScore.push(`Inning ${i+1}: away ${awayScore} - Home ${homeScore}`);
+    if (homeScore!=awayScore){
+      //return (`Away ${awayScore} - Home ${homeScore}`);
+    }
+    else{
+     //return (`Away ${awayScore} - ${homeScore}`);
+    }
+  }
+    return bothScore;
+  
 }
-
+console.log(scoreboard(getInningScore, inning, 9));
 
 
 

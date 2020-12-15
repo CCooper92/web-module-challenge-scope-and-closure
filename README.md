@@ -43,6 +43,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+  function inside of functions. you can call the functions inside of where they live. children have have access to everything that parents do, but parent has no access to child variables. 
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,8 +67,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+In the return statement when its calling the empty function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+the same is that its always a random number, and the difference is will be a different number
+
 c. What is the lexical scope of `newRoll`? 
+Its defined inside a function that in another function.
 
 
 ### Task 3 - Stretch Goals
